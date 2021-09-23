@@ -90,7 +90,7 @@ export default function Projects() {
     console.log(projectArray[1])
 
     return (<>
-        <div className="descp">
+        <div className="descp" >
             <h4>Here are some of my work</h4>
         </div>
         <div id="app">

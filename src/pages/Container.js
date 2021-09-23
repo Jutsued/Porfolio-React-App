@@ -44,7 +44,6 @@ export default function Container() {
       <div className="form">
         <form
         action="mailto:pabloa.bonilla@outlook.com"
-        method="POST"
         encType="multipart/form-data"
         name="EmailForm"
         >
