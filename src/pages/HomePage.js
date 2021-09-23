@@ -30,8 +30,8 @@ export default function HomePage() {
     return (<>
     <header ref={container}>
         <nav className='navbar' id="test" >
-          <a id="myNameLi" href="/#" rel="noreferrer">Pablo A. Bonilla</a>
-            <a href="/#" className="toggle-button" onClick={NavOpener}>
+          <a id="myNameLi" href="/#" rel="noopener noreferrer">Pablo A. Bonilla</a>
+            <a href="/#" className="toggle-button" onClick={NavOpener} rel="noopener noreferrer" aria-label="BurgerMenu">
               <span className="bar"></span>
               <span className="bar"></span>
               <span className="bar"></span>

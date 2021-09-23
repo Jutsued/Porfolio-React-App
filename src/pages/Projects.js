@@ -1,6 +1,10 @@
 import React from "react";
-import ReactDOM from 'react-dom';
 import ReactHtmlParser from 'react-html-parser';
+import movieImg from "./ProjectsImg/movie.jpeg";
+import ipImg from "./ProjectsImg/ipImg.jpeg";
+import newswebsite from "./ProjectsImg/newswebsite.jpeg";
+import CountImg from "./ProjectsImg/CountImg.jpeg";
+import tipImg from "./ProjectsImg/tipImg.jpeg";
 
 
 
@@ -9,7 +13,7 @@ const myProjects = [
         id: 1,
         name: 'React-Movie-App',
         link: 'https://jutsued.github.io/React-Movie-App/',
-        img: './projectsImg/movie.jpeg',
+        img: movieImg,
         sourceCode: 'https://github.com/Jutsued/React-Movie-App',
         techUsed: ["https://img.icons8.com/color/48/000000/html-5--v1.png","https://img.icons8.com/color/48/000000/javascript--v2.png", "https://img.icons8.com/nolan/64/react-native.png", "https://img.icons8.com/color/48/000000/css3.png", "https://img.icons8.com/nolan/64/api-settings.png"]
     },
@@ -17,7 +21,7 @@ const myProjects = [
         id: 2,
         name: 'Tracker',
         link: 'https://jutsued.github.io/ip-address-tracker/',
-        img: './projectsImg/ipImg.jpeg',
+        img: ipImg,
         sourceCode: 'https://github.com/Jutsued/ip-address-tracker',
         techUsed: ["https://img.icons8.com/color/48/000000/html-5--v1.png","https://img.icons8.com/color/48/000000/javascript--v2.png", "https://img.icons8.com/color/48/000000/css3.png", "https://img.icons8.com/nolan/64/api-settings.png", "https://img.icons8.com/nolan/64/xml.png"]
     },
@@ -25,7 +29,7 @@ const myProjects = [
         id: 3,
         name: 'News Website',
         link: 'https://jutsued.github.io/News-Website/',
-        img: './projectsImg/newswebsite.jpeg',
+        img: newswebsite,
         sourceCode: 'https://github.com/Jutsued/News-Website',
         techUsed: ["https://img.icons8.com/color/48/000000/html-5--v1.png","https://img.icons8.com/color/48/000000/javascript--v2.png", "https://img.icons8.com/nolan/64/xml.png", "https://img.icons8.com/color/48/000000/css3.png", "https://img.icons8.com/nolan/64/api-settings.png"]
     },
@@ -33,7 +37,7 @@ const myProjects = [
         id: 4,
         name: 'Countdown',
         link: 'https://jutsued.github.io/Launch-countdown-timer/',
-        img: './projectsImg/CountImg.jpeg',
+        img: CountImg,
         sourceCode: 'https://github.com/Jutsued/Launch-countdown-timer',
         techUsed: ["https://img.icons8.com/color/48/000000/html-5--v1.png", "https://img.icons8.com/color/48/000000/javascript--v2.png", "https://img.icons8.com/color/48/000000/css3.png"]
     },
@@ -41,7 +45,7 @@ const myProjects = [
         id: 5,
         name: 'Tip Calculator',
         link: 'https://jutsued.github.io/tip-calculator-app/',
-        img: './projectsImg/tipImg.jpeg',
+        img: tipImg,
         sourceCode: 'https://github.com/Jutsued/tip-calculator-app',
         techUsed: ["https://img.icons8.com/color/48/000000/html-5--v1.png", "https://img.icons8.com/color/48/000000/javascript--v2.png", "https://img.icons8.com/color/48/000000/css3.png"]
     },
@@ -50,9 +54,6 @@ const myProjects = [
 export default function Projects() {
 
     var projectArray = [];
-    const mystyle = {
-        display: "none"
-      };
 
     myProjects.forEach((project, i) => {
         const title = `${project.name}`;
@@ -69,11 +70,11 @@ export default function Projects() {
             <p>${title}</p>
             <div class="overtop">
             <h3>Tech Used: </h3>
-            <img src="${project.techUsed[0]}" class="smallTech"/>
-            <img src="${project.techUsed[1]}" class="smallTech"/>
-            <img src="${project.techUsed[2]}" class="smallTech"/>
-            <img src="${project.techUsed[3] ? project.techUsed[3] : ""}" class="smallTech"/>
-            <img src="${project.techUsed[4] ? project.techUsed[4] : ""}" class="smallTech"/>
+            <img src="${project.techUsed[0]}" class="smallTech" alt="smallTech"/>
+            <img src="${project.techUsed[1]}" class="smallTech" alt="smallTech"/>
+            <img src="${project.techUsed[2]}" class="smallTech" alt="smallTech"/>
+            <img src="${project.techUsed[3] ? project.techUsed[3] : ""}" class="smallTech" alt="smallTech"/>
+            <img src="${project.techUsed[4] ? project.techUsed[4] : ""}" class="smallTech" alt="smallTech"/>
                 <a href="${live}" target="_blank">
                     <span>Live Site</span>
                 </a>
@@ -90,7 +91,7 @@ export default function Projects() {
     console.log(projectArray[1])
 
     return (<>
-        <div className="descp" >
+        <div className="descp">
             <h4>Here are some of my work</h4>
         </div>
         <div id="app">
