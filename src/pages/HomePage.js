@@ -30,8 +30,8 @@ export default function HomePage() {
     return (<>
     <header ref={container}>
         <nav className='navbar' id="test" >
-          <a id="myNameLi" href="/#" rel="noopener noreferrer">Pablo A. Bonilla</a>
-            <a href="/#" className="toggle-button" onClick={NavOpener} rel="noopener noreferrer" aria-label="BurgerMenu">
+          <a id="myNameLi" href="#" rel="noopener noreferrer">Pablo A. Bonilla</a>
+            <a href="#" className="toggle-button" onClick={NavOpener} rel="noopener noreferrer" aria-label="BurgerMenu">
               <span className="bar"></span>
               <span className="bar"></span>
               <span className="bar"></span>
@@ -39,7 +39,7 @@ export default function HomePage() {
               <div className={openNav ? "navbar-links active" : 'navbar-links'}>
                 <ul>
                   <li id="resume"><a href="https://docs.google.com/document/d/1L4V3lq_AaXaPe6b13Yc3-_d807y47Eol/edit?usp=sharing&ouid=112008200096142852783&rtpof=true&sd=true" 
-                  target="_blank" rel="noreferrer">
+                  target="_blank" rel="noopener noreferrer">
                     Resume</a></li>
                   <li><a href="index.html" data-text="Home">Home</a></li>
                   <li><a href="#tech" data-text="Tech">Tech</a></li>
