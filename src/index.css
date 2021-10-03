@@ -135,6 +135,7 @@ ul li a:hover:before{
       display: flex;
       margin-top: 1rem;
       z-index: 2;
+      cursor: pointer;
     }
     
     .navbar-links {
@@ -376,7 +377,7 @@ footer {
     
  }
 
-.contact {
+/* .contact {
     text-align: center;
     margin: 40px 0;
     grid-area: header;
@@ -504,4 +505,4 @@ form{
             width: 25%;
         }
     
-}
+} */

@@ -31,7 +31,7 @@ export default function HomePage() {
     <header ref={container}>
         <nav className='navbar' id="test" >
           <a id="myNameLi" href="#" rel="noopener noreferrer">Pablo A. Bonilla</a>
-            <a href="#" className="toggle-button" onClick={NavOpener} rel="noopener noreferrer" aria-label="BurgerMenu">
+            <a className="toggle-button" onClick={NavOpener} rel="noopener noreferrer" aria-label="BurgerMenu">
               <span className="bar"></span>
               <span className="bar"></span>
               <span className="bar"></span>
@@ -52,8 +52,8 @@ export default function HomePage() {
       <div className="about">
 
         <div className="aboutMe">
-          <p>Hello there!<br/> I am a front-end Developer who curently reside in NYC.  I enjoy creating websites and making them responsive
-              while continually learning new concepts staying up-to-date with the latest tech 
+          <p>Hello there!<br/> I am a front-end Developer who currently resides in NYC.  I enjoy creating websites and making them responsive
+              while continually learning new concepts and staying up-to-date with the latest tech 
                 in this fast-paced environment. One of my hobbies is riding bicycle around Manhattan, specially central park. <br/><br/>
 
             My goal is to keep building up my arsenal of technologies while simultaneously applying them

@@ -64,22 +64,23 @@ export default function Projects() {
 
         const projectEl = document.createElement('div');
         projectEl.classList.add('project');
+        
 
         projectEl.innerHTML = `
         <img src="${imgURL}" alt="${title}" key="${id}"/>
-            <p>${title}</p>
-            <div class="overtop">
-            <h3>Tech Used: </h3>
-            <img src="${project.techUsed[0]}" class="smallTech" alt="smallTech"/>
-            <img src="${project.techUsed[1]}" class="smallTech" alt="smallTech"/>
-            <img src="${project.techUsed[2]}" class="smallTech" alt="smallTech"/>
-            <img src="${project.techUsed[3] ? project.techUsed[3] : ""}" class="smallTech" alt="smallTech"/>
-            <img src="${project.techUsed[4] ? project.techUsed[4] : ""}" class="smallTech" alt="smallTech"/>
-                <a href="${live}" target="_blank">
-                    <span>Live Site</span>
+            <p key="${id}">${title}</p>
+            <div class="overtop" key="${id}">
+            <h3 key="${id}" >Tech Used: </h3>
+            <img src="${project.techUsed[0]}" class="smallTech" alt="smallTech" key="${id}"/>
+            <img src="${project.techUsed[1]}" class="smallTech" alt="smallTech" key="${id}"/>
+            <img src="${project.techUsed[2]}" class="smallTech" alt="smallTech" key="${id}"/>
+            <img src="${project.techUsed[3] ? project.techUsed[3] : ""}" class="smallTech" alt="smallTech" />
+            <img src="${project.techUsed[4] ? project.techUsed[4] : ""}" class="smallTech" alt="smallTech" />
+                <a href="${live}" target="_blank" key="${id}">
+                    <span key="${id}">Live Site</span>
                 </a>
-                <a href="${code}" target="_blank">
-                    <span>Source Code</span>
+                <a href="${code}" target="_blank" key="${id}">
+                    <span key="${id}">Source Code</span>
                 </a>
             </div>
 
