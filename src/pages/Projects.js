@@ -67,7 +67,9 @@ export default function Projects() {
         
 
         projectEl.innerHTML = `
-        <img src="${imgURL}" alt="${title}" key="${id}"/>
+        <div class="boxLines">
+        <img src="${imgURL}" alt="${title}" key="${id}" class="colorLines"/>
+        </div>
             <p key="${id}">${title}</p>
             <div class="overtop" key="${id}">
             <h3 key="${id}" >Tech Used: </h3>

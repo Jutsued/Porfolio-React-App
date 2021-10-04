@@ -317,10 +317,64 @@ svg:hover
     color: #cacaca;
 }
 
-.project img {
+.colorLines {
+    /* border-radius: 5px;
+    max-width: 100%; */
+
+    border-radius: 15px;
+    max-width: 98%;
+    position: absolute;
+    height: 98%;
+    right: 3px;
+    
+}
+
+.smallTech {
     border-radius: 5px;
     max-width: 100%;
+}
+
+
+.boxLines {
+    position: relative;
+    width: 300px;
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* background: rgba(0, 0, 0, 0.5); */
+    overflow: hidden;
+    border-radius: 20px;
     
+}
+
+.boxLines::before {
+    content: "";
+    position: absolute;
+    width: 160px;
+    height: 160%;
+    background: linear-gradient(#a1f0e6, #3bffe8);
+    animation: animateLines 4s linear infinite;
+    z-index: -1;
+}
+
+.boxLines::after {
+    content: "";
+    position: absolute;
+    inset: 4px;
+    background: #2a2a2a;
+    border-radius: 16px;
+    z-index: -1;
+    
+}
+
+@keyframes animateLines {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
 }
 
 .overtop{
@@ -328,11 +382,15 @@ svg:hover
     opacity: .7;
     overflow: hidden;
     position: absolute;
-    left: 0;
-    bottom: -36px;
+    left: 3px;
+    bottom: -33px;
+    width: 98%;
     right: 0;
+    border-bottom-left-radius: 19px;
+    border-bottom-right-radius: 19px;
     transform: translateY(101%);
     transition: transform 0.3s ease-in;
+    z-index: 10;
 }
 
 .overtop a {
@@ -345,6 +403,7 @@ svg:hover
 }
 
 .project:hover .overtop{
+    border-bottom: 5px;
     transform: translateY(-35%);
 }
 
