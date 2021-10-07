@@ -20,7 +20,7 @@ export default function Form(){
         return(<>
         <h1>Send a Message</h1>
             <form>
-            <div className="formBox">
+            <div className="formBox" id="ct">
                         <div className="row50">
                             <div className="inputBox">
                                 <span>First Name</span>

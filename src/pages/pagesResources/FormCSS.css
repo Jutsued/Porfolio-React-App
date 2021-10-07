@@ -1,8 +1,7 @@
 .contactUs {
     position: relative;
-    width: 100%;
+    width: 80%;
     max-width: 100%;
-    width: 1020px;
     margin: auto;
 }
 
@@ -220,7 +219,9 @@
 
 @media (max-width: 991px) {
     .contactUs {
-        padding: 20px;
+        padding: 0;
+        max-width: 100%;
+        width: 100%;
     }
 
     .box {
