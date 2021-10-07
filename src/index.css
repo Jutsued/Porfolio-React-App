@@ -243,6 +243,7 @@ ul li a:hover:before{
     max-width: 100%;
     width: 1020px;
     margin: 5rem auto;
+    overflow: hidden;
 }
 
 .logos {
