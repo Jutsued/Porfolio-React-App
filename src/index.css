@@ -1,6 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
 
+html {
+    scroll-behavior: smooth;
+}
+
 *{
     padding: 0;
     margin: 0;
@@ -8,6 +12,7 @@
     font-family: 'Noto Sans JP', sans-serif;
     font-size: 18px;
     color: #8a8a8a;
+    scroll-behavior: smooth;
 }
 
 body {

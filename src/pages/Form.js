@@ -1,20 +1,6 @@
 import React from "react";
 
 
-
-
-
-function contactForm  () {
-    return(<>
-
-            
-
-    
-    
-    </>)
-  
-}
-
 export default function Form(){
     function InfoForm() {
         return(<>
@@ -94,7 +80,7 @@ export default function Form(){
     function Map(){
         return(<>
         <div className="contact map">
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3019.8166799353635!2d-73.95224468430285!3d40.810022039549246!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c2f66d3282a545%3A0x1ccd9839e39cdc2d!2sApollo%20Theater!5e0!3m2!1sen!2sus!4v1632784005221!5m2!1sen!2sus" style={{border:0}} allowFullScreen="" loading="lazy"></iframe>
+                <iframe title='MyCity' src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3019.8166799353635!2d-73.95224468430285!3d40.810022039549246!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c2f66d3282a545%3A0x1ccd9839e39cdc2d!2sApollo%20Theater!5e0!3m2!1sen!2sus!4v1632784005221!5m2!1sen!2sus" style={{border:0}} allowFullScreen="" loading="lazy"></iframe>
             </div>
         </>)
     }

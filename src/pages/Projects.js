@@ -1,10 +1,11 @@
-import React from "react";
+
 import ReactHtmlParser from 'react-html-parser';
 import movieImg from "./ProjectsImg/movie.jpeg";
 import ipImg from "./ProjectsImg/ipImg.jpeg";
 import newswebsite from "./ProjectsImg/newswebsite.jpeg";
 import CountImg from "./ProjectsImg/CountImg.jpeg";
 import tipImg from "./ProjectsImg/tipImg.jpeg";
+import React, { useState, useEffect, useReducer, useRef } from 'react';
 
 
 
@@ -55,6 +56,21 @@ export default function Projects() {
 
     var projectArray = [];
 
+    const [images, setImg] = 
+  useState(images => !images, false);
+
+    const ImgHelper = (e) => {
+        if(e.src !== null) {
+            return;
+        } else {
+            e.target.style.visibility = 'none';
+        }
+    };
+
+    useEffect(() => {
+        window.addEventListener("load", ImgHelper)
+      })
+
     myProjects.forEach((project, i) => {
         const title = `${project.name}`;
         const imgURL = `${project.img}`;
@@ -76,8 +92,8 @@ export default function Projects() {
             <img src="${project.techUsed[0]}" class="smallTech" alt="smallTech" key="${id}"/>
             <img src="${project.techUsed[1]}" class="smallTech" alt="smallTech" key="${id}"/>
             <img src="${project.techUsed[2]}" class="smallTech" alt="smallTech" key="${id}"/>
-            <img src="${project.techUsed[3] ? project.techUsed[3] : ""}" class="smallTech" alt="smallTech" />
-            <img src="${project.techUsed[4] ? project.techUsed[4] : ""}" class="smallTech" alt="smallTech" />
+            <img src="${project.techUsed[3] ? project.techUsed[3] : " " }"  class="smallTech" alt="smallTech" ${onload = ImgHelper(e)}/>
+            <img src="${project.techUsed[4] ? project.techUsed[4] : " " }" class="smallTech" alt="smallTech" />
                 <a href="${live}" target="_blank" key="${id}">
                     <span key="${id}">Live Site</span>
                 </a>
