@@ -52,35 +52,26 @@ const myProjects = [
     },
 ];
 
+
 export default function Projects() {
 
     var projectArray = [];
 
-    const [images, setImg] = 
-  useState(images => !images, false);
-
-    const ImgHelper = (e) => {
-        if(e.src !== null) {
-            return;
-        } else {
-            e.target.style.visibility = 'none';
-        }
-    };
-
-    useEffect(() => {
-        window.addEventListener("load", ImgHelper)
-      })
-
-    myProjects.forEach((project, i) => {
+    myProjects.forEach((project, index) => {
         const title = `${project.name}`;
         const imgURL = `${project.img}`;
         const code = `${project.sourceCode}`;
         const live = `${project.link}`;
         const id = `${project.id}`;
-
+        const tech = `${project.techUsed.map((item, i)=> {
+            // return item;
+            return <img src="${item[i]}" class="smallTech" alt="smallTech" key="${id}"/>
+        })}`;
+        
+        
+        
         const projectEl = document.createElement('div');
         projectEl.classList.add('project');
-        
 
         projectEl.innerHTML = `
         <div class="boxLines">
@@ -91,13 +82,13 @@ export default function Projects() {
             <h3 key="${id}" >Tech Used: </h3>
             <img src="${project.techUsed[0]}" class="smallTech" alt="smallTech" key="${id}"/>
             <img src="${project.techUsed[1]}" class="smallTech" alt="smallTech" key="${id}"/>
-            <img src="${project.techUsed[2]}" class="smallTech" alt="smallTech" key="${id}"/>
-            <img src="${project.techUsed[3] ? project.techUsed[3] : " " }"  class="smallTech" alt="smallTech" ${onload = ImgHelper(e)}/>
-            <img src="${project.techUsed[4] ? project.techUsed[4] : " " }" class="smallTech" alt="smallTech" />
+            <img src="${project.techUsed[2]}" class="smallTech" alt="smallTech" id="broken" key="${id}"/>
+            <img src="${project.techUsed[3] !== undefined ? project.techUsed[3] : undefined}" ${project.techUsed[3] === undefined ? `style="visibility:hidden;"`: ""} class="smallTech" alt="smallTech"/>
+            <img src="${project.techUsed[4] !== undefined ? project.techUsed[4] : undefined}" ${project.techUsed[4] === undefined ? `style="visibility:hidden;"`: ""} class="smallTech" alt="smallTech"/>
                 <a href="${live}" target="_blank" key="${id}">
                     <span key="${id}">Live Site</span>
                 </a>
-                <a href="${code}" target="_blank" key="${id}">
+                <a href="${code}" target="_blank" key="${id}"> 
                     <span key="${id}">Source Code</span>
                 </a>
             </div>
@@ -110,6 +101,7 @@ export default function Projects() {
     console.log(projectArray[1])
 
     return (<>
+    
         <div className="descp">
             <h4>Here are some of my work</h4>
         </div>
